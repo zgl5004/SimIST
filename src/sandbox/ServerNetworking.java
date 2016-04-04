@@ -9,6 +9,6 @@ package sandbox;
  *
  * @author kjrya
  */
-public class networking {
+public class ServerNetworking {
     
 }
