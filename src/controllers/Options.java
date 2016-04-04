@@ -35,7 +35,7 @@ public final class Options extends JPanel
   
     @Override
     public void setPreferredSize(Dimension dimension) {
-        throw new UnsupportedOperationException("luke "); 
+        throw new UnsupportedOperationException(" "); 
     }
 
     @Override
