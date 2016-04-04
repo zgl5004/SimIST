@@ -11,6 +11,7 @@ package Entities;
  */
 public class Location {
     //private Floor floor;
+    //Commented out floor attribute and methods because we are assuming floor will be associated with room.
     private Room room;
     private int xValue;
     private int yValue;
