@@ -9,6 +9,12 @@ package controllers;
  *
  * @author aot5238
  */
-public class Options {
+public class Options 
+{
+    
+    public Options()
+    {
+        
+    }
     
 }
