@@ -10,6 +10,15 @@ package entities;
  *
  * @author Jon
  */
-public class People {
+public class Person {
+    private int intelligence;
+    private int charisma;
+    private int stress;
+    private int disipline;
+    private int attractiveness;
+    private String gender;
     
+    Person(){
+        
+    }
 }
