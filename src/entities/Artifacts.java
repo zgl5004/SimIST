@@ -14,7 +14,7 @@ import javafx.scene.image.Image;
  */
 public class Artifacts {
     
-   public String ArtifactMaterial; 
+   private String ArtifactMaterial; 
    public String ArtifactType;
    
    public boolean isUsable;
@@ -25,6 +25,17 @@ public class Artifacts {
    public int yLocation; 
   
    ArrayList <Image> artifacts;  
+   
+   Artifacts(String ArtifactMaterial, String ArtifactType,boolean isUsable,boolean isEditable,boolean isCollidable, int xLocation,int yLocation)
+   {
+       this.ArtifactMaterial=ArtifactMaterial; 
+       this.ArtifactType=ArtifactType;
+       this.isUsable=isUsable; 
+       this.isEditable = isEditable;
+       this.isCollidable=isCollidable;
+       this.xLocation=xLocation;
+       this.yLocation=yLocation; 
+   }
    
     
     
@@ -39,6 +50,15 @@ public class Artifacts {
     public void getLocation(){
         //return location
     }
+
+    /**
+     * @return the ArtifactMaterial
+     */
+    public String getArtifactMaterial() {
+        return ArtifactMaterial;
+    }
+
+  
     
  
     
