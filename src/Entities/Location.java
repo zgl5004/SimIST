@@ -10,13 +10,18 @@ package Entities;
  * @author Adam
  */
 public class Location {
-    private Floor floor;
+    //private Floor floor;
     private Room room;
     private int xValue;
+    private int yValue;
+    private boolean isOccupied;
     
-    Location(Floor floor, Room room){
+    Location(/*Floor floor, */Room room, int xValue, int yValue, boolean isOccupied){
         this.room = room;
-        this.floor = floor;
+        this.xValue = xValue;
+        this.yValue = yValue;
+        this.isOccupied = isOccupied;
+        //this.floor = floor;
     }
     
     
@@ -25,9 +30,9 @@ public class Location {
     }
     
     
-    public Floor getFloor(){
+   /* public Floor getFloor(){
         return floor;
-    }
+    }*/
     
     
     public void setRoom(Room room){
@@ -35,8 +40,50 @@ public class Location {
     }
     
     
-    public void setFloor(Floor floor){
+    /*public void setFloor(Floor floor){
         this.floor = floor;
+    }*/
+
+    /**
+     * @return the xValue
+     */
+    public int getxValue() {
+        return xValue;
+    }
+
+    /**
+     * @param xValue the xValue to set
+     */
+    public void setxValue(int xValue) {
+        this.xValue = xValue;
+    }
+
+    /**
+     * @return the yValue
+     */
+    public int getyValue() {
+        return yValue;
+    }
+
+    /**
+     * @param yValue the yValue to set
+     */
+    public void setyValue(int yValue) {
+        this.yValue = yValue;
+    }
+
+    /**
+     * @return the isOccupied
+     */
+    public boolean isIsOccupied() {
+        return isOccupied;
+    }
+
+    /**
+     * @param isOccupied the isOccupied to set
+     */
+    public void setIsOccupied(boolean isOccupied) {
+        this.isOccupied = isOccupied;
     }
     
             
