@@ -1,7 +1,7 @@
 
 package entities;
 
-public class Person implements MouseListener {
+public abstract class Person {
     private String fName;
     private String lName;
     private int age;
