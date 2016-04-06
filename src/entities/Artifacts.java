@@ -5,14 +5,17 @@
  */
 package entities;
 
+import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.util.ArrayList;
 import javafx.scene.image.Image;
+import javax.swing.*;
 
 /**
  *
  * @author sns5408
  */
-public class Artifacts {
+public class Artifacts extends Rectangle {
     
    private String ArtifactMaterial; 
    public String ArtifactType;
@@ -26,7 +29,7 @@ public class Artifacts {
   
    ArrayList <Image> artifacts;  
    
-   Artifacts(String ArtifactMaterial, String ArtifactType,boolean isUsable,boolean isEditable,boolean isCollidable, int xLocation,int yLocation)
+  Artifacts(String ArtifactMaterial, String ArtifactType,boolean isUsable,boolean isEditable, boolean isCollidable, int xLocation, int yLocation)
    {
        this.ArtifactMaterial=ArtifactMaterial; 
        this.ArtifactType=ArtifactType;
@@ -38,19 +41,24 @@ public class Artifacts {
    }
    
     
-    
+    public void paintComponent(Graphics g){
+        paintComponent(g);
+        
+        
+    }
             
- public void getArtifactType(){
+ public void getArtifactInfo(){
         //return Type of Artifact ie: chair, computer, painting, plant, table, etc. 
     }
     
     public void getImage(){
         //return image
+        
     }
-    public void getLocation(){
+   /* public void getLocation(){
         //return location
     }
-
+*/
     /**
      * @return the ArtifactMaterial
      */
@@ -58,12 +66,28 @@ public class Artifacts {
         return ArtifactMaterial;
     }
 
-  
-    
  
-    
-    
-    
-    
+    public class Furniture extends Artifacts{
+        String FurnitureType;
+        String FurnitureDescription;
+        
+        Furniture(String ArtifactMaterial, String ArtifactType,boolean isUsable,boolean isEditable, boolean isCollidable, int xLocation, int yLocation, String FurnitureName){
+            super(ArtifactMaterial,ArtifactType,isUsable,isEditable,isCollidable,xLocation,yLocation);
+            this.FurnitureType = FurnitureType;
+            
+            
+            
+        }
+            
+            
+            
+        }
     
 }
+ 
+      
+    
+    
+    
+    
+

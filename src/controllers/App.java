@@ -1,5 +1,9 @@
 package controllers;
 
+import entities.*;
+
+import javax.swing.*;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,6 +20,8 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        JFrameOne j1 = new JFrameOne();
+      
         // TODO code application logic here
     }
     
