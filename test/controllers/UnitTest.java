@@ -33,10 +33,15 @@ public class UnitTest {
     @Test
     public void testGetName() {
         System.out.println("getName");
-        Unit instance = new Unit("Example Unit");
-        String expResult = "Example Unit";
-        String result = instance.getName();
-        assertEquals(expResult, result);
+        Unit instance = new Unit("Example Unit", new Floor(1));
+        
+        String expName = "Example Unit";
+        String name = instance.getName();
+        assertEquals(expName, name);
+        
+        int expFloor = 1;
+        int floor = instance.getFloorLevel();
+        assertEquals(expFloor, floor);
     }
     
 }
