@@ -21,13 +21,14 @@ public class ServerNetworking
     {
         String incomingData;
         String capIncomingData;
-        ServerSocket welcomeSocket = new ServerSocket(5555);
+        ServerSocket welcomeSocket = new ServerSocket(44221);
         
         while(true){
             Socket connectionSocket = welcomeSocket.accept();
             BufferedReader incoming = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
             DataOutputStream outgoing = new DataOutputStream(connectionSocket.getOutputStream());
             incomingData = incoming.readLine();
+            System.out.println(incomingData);
             capIncomingData = incomingData.toUpperCase() + '\n';
             outgoing.writeBytes(capIncomingData);
         }
