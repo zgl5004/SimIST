@@ -20,13 +20,13 @@ public class App {
     public static void main(String[] args) throws Exception {
         {
         String[] weatherSite;
-        URL weather = new URL("http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2499253/");
+        URL weather = new URL("https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22statecollege%2C%20pa%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys");
         URLConnection yc = weather.openConnection();
         BufferedReader in = new BufferedReader(new InputStreamReader(
                                     yc.getInputStream()));
-        String inputLine;
+        String inputLine=in.readLine();
         
-        while (((inputLine = in.readLine()))!= null) {
+
             System.out.println(inputLine);
             
             
@@ -38,5 +38,4 @@ public class App {
         } 
 
     }
-}
 
