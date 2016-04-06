@@ -9,6 +9,18 @@ package entities;
  *
  * @author amm6946
  */
-public class Visitor extends Person{
+public class Visitor extends Person
+{
     
+    
+    public Visitor()
+    {
+        super();
+    }
+    
+    public void getInfo()
+    {
+        super.getInfo();
+        
+    }
 }

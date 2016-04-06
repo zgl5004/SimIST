@@ -9,12 +9,10 @@ package entities;
  *
  * @author vqm5108
  */
-public abstract class Professor extends Person 
+public abstract class Professor extends Person
 {
-
-
-public Person()
-{
-super();
-}
+    public Professor()
+    {
+        super();
+    }
 }
