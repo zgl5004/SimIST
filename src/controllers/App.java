@@ -1,6 +1,7 @@
 package controllers;
 
 import java.text.ParseException;
+import sandbox.Clock;
 import sandbox.ISTTime;
 
 /*
@@ -19,8 +20,9 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws ParseException {
+        Clock c = new Clock();
         ISTTime t = new ISTTime();
-        t.getTime();
+        System.out.println(t.getTime());
     }
     
 }

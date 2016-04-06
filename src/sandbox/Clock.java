@@ -8,8 +8,11 @@ I guess that works.
 package sandbox;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.Date;
 import javax.swing.Timer;
 
 
@@ -18,14 +21,20 @@ import javax.swing.Timer;
  * @author aahughes
  */
 public class Clock implements ActionListener {
+    SimpleDateFormat format;
+    Date beginTime;
+    Date endTime;    
     ISTTime time;
     Timer progessionOfTime;
     int incrementTime;
     String newCurrentTime;
     
-    public Clock(){
+    public Clock() throws ParseException{
+        format = new SimpleDateFormat("HH:mm");
+        beginTime = format.parse("8:00");
+        endTime = format.parse("0:00");             
         progessionOfTime = new Timer(60000,this);
-        incrementTime = Integer.parseInt(time.getTime());
+        //incrementTime = 
     }
 
     @Override

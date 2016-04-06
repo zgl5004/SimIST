@@ -20,25 +20,15 @@ import java.util.Date;
  * @author aah5307
  */
 public class ISTTime {
-    
-    SimpleDateFormat format;
-    Date currentTime;
-    Date beginTime;
-    Date endTime;
+    String gameStartTime;
     String rightNow;
-    Calendar c;
     
     public ISTTime() throws ParseException{
-        format = new SimpleDateFormat("HH:mm");
-        //ignore beginTime for now, I think it's useful, but not sure what I can do with it. - Max
-        //beginTime = format.parse("8:00");
-        //Ignore endTime for now, currently the simulation runs forever. I find that it reflects college life wonderfully. - Max
-        //endTime = format.parse("0:00");        
-        rightNow = format.format(currentTime);
+        gameStartTime = ("8:00");
     }
     
     public String getTime(){
-      return this.rightNow;
+      return this.gameStartTime;
     }
     public void setCurrentTime(String newCurrentTime){
         this.rightNow = newCurrentTime;
