@@ -10,6 +10,22 @@ package entities;
  *
  * @author Jon
  */
-public class Player {
+public class Player extends Person{
+    
+    public Player(){
+        super("Player");
+    }
+    
+    //Players will be given skill points and allowed to add them into whatever category they want
+    //this method is used to clear the randomly generated stats
+    public void clearPlayerStats(){
+        super.setAttractiveness(0);
+        super.setCharisma(0);
+        super.setDisipline(0);
+        super.setIntelligence(0);
+        super.setLuck(0);
+        //super.setStress(stress);
+        //Players will be given a set starting stress level
+    }
     
 }

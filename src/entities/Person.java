@@ -12,16 +12,33 @@ import java.util.Random;
  *
  * @author Jon
  */
-public class Person {
+public abstract class Person {
+    
+    /*
+       It makes most sense to give all interactions between students, players,
+        and professors their own class
+    */
+    
+    private String personType;
+    
+    //common person attributes
     private int intelligence;
     private int charisma;
     private int stress;
     private int disipline;
     private int attractiveness;
     private int luck;
-    //private String gender;
     
-    Person(){
+    //Position on the maps
+    private double x;
+    private double y;
+    
+    //based on random events, these attributes can be affected
+    //player will get to choose theirs
+    public Person(String personType){
+        
+        this.personType = personType;
+        
         Random rand = new Random();
         
         int intelligence = rand.nextInt(10) + 1;
@@ -42,11 +59,13 @@ public class Person {
         int luck = rand.nextInt(10) + 1;
         this.luck = luck;
         
+        
+        
         //gender under construction
     }
     
     public void printAttributes(){
-        System.out.println("Attributes");
+        System.out.println("Attributes (" + this.personType + ")");
         System.out.println("---------------------------------");
         System.out.println("Intelligence: " + intelligence);
         System.out.println("Charisma: " + charisma);
@@ -57,6 +76,8 @@ public class Person {
         System.out.println();
     }
 
+    //getters
+    
     public int getIntelligence(){
         return this.intelligence;
     }
@@ -79,6 +100,32 @@ public class Person {
     
     public int getLuck(){
         return this.luck;
+    }
+    
+    //setters
+    
+    public void setIntelligence(int intelligence){
+        this.intelligence = intelligence;
+    }
+    
+    public void setCharisma(int charisma){
+        this.charisma = charisma;
+    }
+    
+    public void setStress(int stress){
+        this.stress = stress;
+    }
+    
+    public void setDisipline(int disipline){
+        this.disipline = disipline;
+    }
+    
+    public void setAttractiveness(int attractiveness){
+        this.attractiveness = attractiveness;
+    }
+    
+    public void setLuck(int luck){
+        this.luck = luck;
     }
     
 }

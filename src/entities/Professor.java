@@ -10,6 +10,10 @@ package entities;
  *
  * @author Jon
  */
-public class Professor {
+public class Professor extends Person{
+    
+    public Professor(){
+        super("Professor");
+    }
     
 }
