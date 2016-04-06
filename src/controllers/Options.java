@@ -30,7 +30,8 @@ public class Options extends JFrame
     {
         super();        
 //        frame.setSize((panelWidth * (1 / 10)), panelHeight);
-        frame.setSize(new Dimension(800,600));        
+//        frame.setSize(new Dimension(800,600));
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setBackground(Color.GREEN);
         frame.setLayout(new GridBagLayout());
         frame.setVisible(true);
