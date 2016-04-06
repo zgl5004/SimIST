@@ -11,8 +11,13 @@ package entities;
  */
 public abstract class Professor extends Person
 {
-    public Professor()
+    private String degree;
+    private int salary;
+    private boolean tenure;
+    
+    public Professor(String fName, String lName, int age)
     {
-        super();
+        super(fName, lName, age);
     }
+    
 }

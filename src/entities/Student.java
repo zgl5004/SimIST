@@ -22,6 +22,7 @@ public abstract class Student extends Person {
   public void getInfo()
   {
       super.getInfo();
+      System.out.println(super.fName);
       System.out.println("ID number: " + studentIDnum + "GPA: " + GPA + "Class standing: " + classStanding);
   }
 }

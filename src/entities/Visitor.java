@@ -11,11 +11,12 @@ package entities;
  */
 public class Visitor extends Person
 {
+    private int collegeAffinity;
     
-    
-    public Visitor()
+    public Visitor(String fName, String lName, int age)
     {
-        super();
+        super(fName, lName, age);
+        collegeAffinity = 0;
     }
     
     public void getInfo()

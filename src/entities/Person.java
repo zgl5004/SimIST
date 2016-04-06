@@ -6,7 +6,7 @@ public abstract class Person {
     private String lName;
     private int age;
     
-    public Person()
+    public Person(String fName, String lName, int age)
     {
         this.fName = fName;
         this.lName = lName;
