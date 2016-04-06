@@ -4,22 +4,18 @@ import java.util.ArrayList;
 
 public class Floor {
 
-    protected ArrayList<Unit> unitList;
-
-    public Floor() {
-        ArrayList<Unit> unitList = new ArrayList<Unit>();
-    }
+    protected ArrayList<Unit> unitList = new ArrayList<Unit>();
 
     public void addUnit(Unit u) {
-        unitList.add(u);
+        this.unitList.add(u);
     }
     
     public void removeUnit(Unit u){
-        unitList.remove(u);
+        this.unitList.remove(u);
     } 
 
     public ArrayList<Unit> getUnitList() {
-        return unitList;
+        return this.unitList;
     }
 
     public void setUnitList(ArrayList<Unit> unitList) {
