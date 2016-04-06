@@ -2,6 +2,6 @@
 package controllers;
 
 
-public class Stairs {
+public class Stairs extends Mover {
     
 }
