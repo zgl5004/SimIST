@@ -18,5 +18,9 @@ public abstract class Person {
         System.out.println("First name: " + fName + "Last name: " + lName + "Age: " + age);
     }
     
+    public static void main(String[] Args){
+        
+    }
+    
     
 }
