@@ -25,6 +25,7 @@ public class Classroom {
 
     }
 
+    // function: this is a time table of a class
     private class AvailabilitySchedule {
 
         boolean[] availability;
@@ -57,7 +58,7 @@ public class Classroom {
     private int classMaximumCapacity;
     private Dimensions theDimension;
 
-    private AvailabilitySchedule availability;
+    private AvailabilitySchedule theClassAvailability;
 
     private int classRoomNumber;
 
