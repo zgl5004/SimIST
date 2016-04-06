@@ -10,6 +10,7 @@ package entities;
  *
  * @author Jon
  */
+//This class is a demonstration of how people will interact with one another
 public class Behavior {
     
     private Person person1;
