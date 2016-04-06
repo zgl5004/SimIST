@@ -10,7 +10,7 @@ public abstract class Person {
     private ArrayList<String> names = new ArrayList<String>();
    
     
-    public Person(String fName, String lName, int age, ArrayList<String> names)
+    public Person(String fName, String lName, int age)
     {
         this.fName = fName;
         this.lName = lName;
@@ -31,7 +31,9 @@ public abstract class Person {
     }
     
     public static void main(String[] Args){
-        
+      Professor prof = new Professor();
+      Student stud = new Student();
+      Visitor vis = new Visitor();
     }
     
     
