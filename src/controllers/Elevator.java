@@ -2,6 +2,6 @@
 package controllers;
 
 
-public class Elevator {
+public class Elevator extends Mover {
     
 }
