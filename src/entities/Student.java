@@ -10,6 +10,8 @@ package entities;
  *
  * @author Jon
  */
+
+//Aaron's team is working on the subclasses, so we focused on the person class primarily
 public class Student extends Person{
     
     public Student(){

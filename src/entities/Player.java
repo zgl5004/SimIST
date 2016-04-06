@@ -10,7 +10,9 @@ package entities;
  *
  * @author Jon
  */
+//Aaron's team is working on the subclasses, so we focused on the person class primarily
 public class Player extends Person{
+    
     
     public Player(){
         super("Player");
