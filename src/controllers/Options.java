@@ -24,7 +24,7 @@ public class Options extends JFrame
      private boolean pauseOption = false; 
      private JButton start; 
      private JButton pause; 
-     JFrame frame = new JFrame("Frame");
+     JFrame frame = new JFrame("Options");
      
     public Options()
     {
