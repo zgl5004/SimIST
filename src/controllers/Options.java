@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
@@ -16,28 +17,34 @@ import javax.swing.JPanel;
  * @author aot5238 and lmo5113
  *
  */
-public final class Options extends JPanel
-{
-     
-     int panelWidth;
-     int panelHeight;
+public class Options extends JFrame
+{     
+//     int panelWidth;
+//     int panelHeight;
      private boolean pauseOption = false; 
      private JButton start; 
      private JButton pause; 
-    
-    public Options(int panelWidth, int panelHeight)
+     JFrame frame = new JFrame("Frame");
+     
+    public Options()
     {
-        super();
-        setSize((panelWidth * (1 / 10)), panelHeight);
-        setPreferredSize(new Dimension(300, 450));
-        setBackground(Color.GREEN);
-        setLayout(new GridBagLayout());
+        super();        
+//        frame.setSize((panelWidth * (1 / 10)), panelHeight);
+        frame.setSize(new Dimension(800,600));        
+        frame.setBackground(Color.GREEN);
+        frame.setLayout(new GridBagLayout());
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
     
     public void addComponents(){
         start = new JButton("Start");
         pause = new JButton("Pause");
+        
+        add(start);
+        add(pause);
     }
     
     public void setStart(JButton start) {
@@ -56,23 +63,20 @@ public final class Options extends JPanel
         return pauseOption;
     }
 
-    @Override
     public void setSize(int i, int panelHeight) {
-        throw new UnsupportedOperationException(); 
+        //throw new UnsupportedOperationException(); 
     }
   
-    @Override
     public void setPreferredSize(Dimension dimension) {
-        throw new UnsupportedOperationException(" "); 
+        //throw new UnsupportedOperationException(" "); 
     }
 
-    @Override
     public void setBackground(Color GREEN) {
-        throw new UnsupportedOperationException(""); 
+        //throw new UnsupportedOperationException(""); 
     }
 
     private void setLayout(GridBagLayout gridBagLayout) {
-        throw new UnsupportedOperationException(); 
+        //throw new UnsupportedOperationException(); 
                 }
 
 }
