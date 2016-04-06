@@ -7,7 +7,7 @@ package entities;
 
 /**
  *
- * @author junggue
+ * @author junggue, ed reinoso
  */
 public class Classroom {
 
