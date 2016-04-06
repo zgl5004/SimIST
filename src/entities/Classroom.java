@@ -61,7 +61,7 @@ public class Classroom {
 
     private int classRoomNumber;
 
-    // classroom behaviors
+    //classroom behaviors
     public void havingExam() {
     }
 
@@ -70,7 +70,8 @@ public class Classroom {
 
     public void cleaned() {
     }
-
+    //********************************************************************************
+    
     // instructors behaviors
     public void instructorProctoring() {
     }
@@ -83,6 +84,7 @@ public class Classroom {
 
     public void instructorComeIn() {
     }
+    //********************************************************************************
 
     // students behaviors
     public void studentSitting() {
@@ -96,6 +98,8 @@ public class Classroom {
 
     public void studentComeIn() {
     }
+    //********************************************************************************
+
 
     // cleaners behaviors
     public void cleanerClean() {
@@ -106,5 +110,6 @@ public class Classroom {
 
     public void cleanerComeIn() {
     }
+    //********************************************************************************
 
 }
