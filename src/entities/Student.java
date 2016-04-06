@@ -1,22 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package entities;
 
-/**
- *
- * @author amm6946
- */
+
 public abstract class Student extends Person {
     private int studentIDnum;
     private double GPA;
     private String classStanding;
     
-    Student()
+    public Student(String fName, String lName, int age, int studentIDnum, double GPA, String classStanding)
     {
-        super();
+     super(fName, lName, age);
+     this.studentIDnum = studentIDnum;
+     this.GPA = GPA;
+     this.classStanding = classStanding;
     }
     
   public void getInfo()
