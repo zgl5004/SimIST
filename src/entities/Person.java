@@ -19,7 +19,7 @@ public class Person {
     private int disipline;
     private int attractiveness;
     private int luck;
-    private String gender;
+    //private String gender;
     
     Person(){
         Random rand = new Random();
@@ -46,7 +46,39 @@ public class Person {
     }
     
     public void printAttributes(){
-        
+        System.out.println("Attributes");
+        System.out.println("---------------------------------");
+        System.out.println("Intelligence: " + intelligence);
+        System.out.println("Charisma: " + charisma);
+        System.out.println("Stress: " + stress);
+        System.out.println("Disipline: " + disipline);
+        System.out.println("Attractiveness: " + attractiveness);
+        System.out.println("Luck: " + luck);
+        System.out.println();
+    }
+
+    public int getIntelligence(){
+        return this.intelligence;
+    }
+    
+    public int getCharisma(){
+        return this.charisma;
+    }
+    
+    public int getStress(){
+        return this.stress;
+    }
+    
+    public int getDisipline(){
+        return this.disipline;
+    }
+    
+    public int getAttractiveness(){
+        return this.attractiveness;
+    }
+    
+    public int getLuck(){
+        return this.luck;
     }
     
 }
