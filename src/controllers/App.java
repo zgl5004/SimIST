@@ -20,7 +20,12 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        JFrameOne j1 = new JFrameOne();
+        
+    JFrame frame = new JFrameOne();
+    frame.setSize(900, 700);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setVisible(true);
+
       
         // TODO code application logic here
     }
