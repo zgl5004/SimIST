@@ -20,27 +20,34 @@ import java.util.Date;
  * @author aah5307
  */
 public class ISTTime {
-    String gameStartTime;
-    String rightNow;
+    LocalDateTime now;
     
+
     public ISTTime() throws ParseException{
-        gameStartTime = ("8:00");
+        now = now.of(2016,4,1,8,0);
     }
     
-    public String getTime(){
-      return this.gameStartTime;
+    public LocalTime getTime(){
+      return this.now.toLocalTime();
     }
-    public void setCurrentTime(String newCurrentTime){
-        this.rightNow = newCurrentTime;
+    
+    public LocalDate getDate(){
+        return this.now.toLocalDate();
     }
-/*    
+    
+    public void setTime(LocalTime newCurrentTime){
+        this.now = newCurrentTime.atDate(getDate());
+    }
+    
     public void setDate(LocalDate newDate){
-        //this.date = newDate;
+        this.now = newDate.atTime(getTime());
     }
     
     public String showDate(){
-        //return date.getDayOfMonth() + " " + date.getMonth() + "" + date.getYear();
-
+        return now.getDayOfMonth() + " " + now.getMonth() + "" + now.getYear();
     }
-*/  
+    
+    public String showTime(){
+        return now.getHour() + " : " + now.getMinute();
+    }
 }
