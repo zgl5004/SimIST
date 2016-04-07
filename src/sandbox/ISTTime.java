@@ -23,7 +23,7 @@ public class ISTTime {
     LocalDateTime now;
     
 
-    public ISTTime() throws ParseException{
+    public ISTTime() {
         now = now.of(2016,4,1,8,0);
     }
     
