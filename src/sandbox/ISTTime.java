@@ -10,9 +10,6 @@ package sandbox;
 
 import java.text.ParseException;
 import java.time.*;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 
 
 /**
@@ -24,23 +21,23 @@ public class ISTTime {
     
 
     public ISTTime() throws ParseException{
-        now = now.of(2016,4,1,8,0);
+        this.now = LocalDateTime.of(2016,4,1,8,0);
     }
     
     public LocalTime getTime(){
-      return this.now.toLocalTime();
+      return now.toLocalTime();
     }
     
     public LocalDate getDate(){
-        return this.now.toLocalDate();
+        return now.toLocalDate();
     }
     
     public void setTime(int hour){
-        this.now = now.withHour(hour);
+        now = now.withHour(hour);
     }
     
     public void setDate(LocalDate newDate){
-        this.now = newDate.atTime(getTime());
+        now = newDate.atTime(getTime());
     }
     
     public String showDate(){
@@ -51,8 +48,4 @@ public class ISTTime {
         return now.getHour() + " : " + now.getMinute();
     }
     
-    
-    public void test(){
-        
-    }
 }
