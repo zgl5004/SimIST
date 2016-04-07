@@ -5,10 +5,10 @@
  */
 package entities;
 
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.Rectangle;
 import java.util.ArrayList;
-import javafx.scene.image.Image;
+
 import javax.swing.*;
 
 /**
@@ -17,8 +17,7 @@ import javax.swing.*;
  */
 public class Artifacts extends Rectangle {
     
-   private String ArtifactMaterial; 
-   public String ArtifactType;
+   public String ArtifactName;
    
    public boolean isUsable;
    public boolean isEditable; 
@@ -27,34 +26,35 @@ public class Artifacts extends Rectangle {
    public int xLocation;
    public int yLocation; 
   
-   ArrayList <Image> artifacts;  
+   public Image artifacts; 
    
-  Artifacts(String ArtifactMaterial, String ArtifactType,boolean isUsable,boolean isEditable, boolean isCollidable, int xLocation, int yLocation)
+   
+  Artifacts(String ArtifactName,boolean isUsable, boolean isCollidable, int xLocation, int yLocation, Image artifacts)
    {
-       this.ArtifactMaterial=ArtifactMaterial; 
-       this.ArtifactType=ArtifactType;
+       this.ArtifactName=ArtifactName;
        this.isUsable=isUsable; 
        this.isEditable = isEditable;
        this.isCollidable=isCollidable;
        this.xLocation=xLocation;
        this.yLocation=yLocation; 
+       this.artifacts = artifacts;
+       
    }
    
     
-    public void paintComponent(Graphics g){
-        paintComponent(g);
+    public void Draw(Graphics g){
+        g.drawImage(artifacts, xLocation, yLocation, null);
+        
+        
         
         
     }
             
  public void getArtifactInfo(){
-        //return Type of Artifact ie: chair, computer, painting, plant, table, etc. 
+        System.out.println(ArtifactName +" "+ isUsable+" "+ isCollidable);
     }
     
-    public void getImage(){
-        //return image
-        
-    }
+   
    /* public void getLocation(){
         //return location
     }
@@ -62,28 +62,36 @@ public class Artifacts extends Rectangle {
     /**
      * @return the ArtifactMaterial
      */
-    public String getArtifactMaterial() {
-        return ArtifactMaterial;
+   
     }
 
  
-    public class Furniture extends Artifacts{
-        String FurnitureType;
-        String FurnitureDescription;
+   /* public class Furniture extends Artifacts{
         
-        Furniture(String ArtifactMaterial, String ArtifactType,boolean isUsable,boolean isEditable, boolean isCollidable, int xLocation, int yLocation, String FurnitureName){
-            super(ArtifactMaterial,ArtifactType,isUsable,isEditable,isCollidable,xLocation,yLocation);
-            this.FurnitureType = FurnitureType;
+        
+        Furniture(String ArtifactName,boolean isUsable, boolean isCollidable, int xLocation, int yLocation,Image artifacts ){
             
-            
+            super(ArtifactName,isUsable,isCollidable,xLocation,yLocation,artifacts);
+         
+        
+         
+         
+        
+         
+        }
+            public void Draw(Graphics g){
+               super.Draw(g);
+            }
+            public void getArtifactInfo(){
+                super.getArtifactInfo();
+            }
+            public String getArtifactName(){
+                return super.ArtifactName;
+            }
             
         }
-            
-            
-            
-        }
-    
-}
+    */
+
  
       
     
