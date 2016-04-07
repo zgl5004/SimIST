@@ -35,8 +35,8 @@ public class ISTTime {
         return this.now.toLocalDate();
     }
     
-    public void setTime(LocalTime newCurrentTime){
-        this.now = newCurrentTime.atDate(getDate());
+    public void setTime(int hour){
+        this.now = now.withHour(hour);
     }
     
     public void setDate(LocalDate newDate){
@@ -49,5 +49,10 @@ public class ISTTime {
     
     public String showTime(){
         return now.getHour() + " : " + now.getMinute();
+    }
+    
+    
+    public void test(){
+        
     }
 }
