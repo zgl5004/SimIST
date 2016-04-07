@@ -11,7 +11,7 @@ import javax.swing.*;
 
 /**
  *
- * @author junggue
+ * @author junggue, ed reinoso
  */
 public class Classroom extends JPanel{
 
