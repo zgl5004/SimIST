@@ -13,11 +13,17 @@ public class Professor extends Person
 {
     private String degree;
     private int salary;
-    private boolean tenure;
     
-    public Professor(String fName, String lName, int age)
+    public Professor(String fName, String lName, int age, String degree, int salary)
     {
         super(fName, lName, age);
+        this.degree = degree;
+        this.salary = salary;
+    }
+    
+    public String getInfo()
+    {
+        return super.getInfo();
     }
     
 }

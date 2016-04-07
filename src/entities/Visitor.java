@@ -19,9 +19,9 @@ public class Visitor extends Person
         collegeAffinity = 0;
     }
     
-    public void getInfo()
+    public String getInfo()
     {
-        super.getInfo();
+       return super.getInfo();
         
     }
 }

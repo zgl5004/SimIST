@@ -15,9 +15,9 @@ public class Student extends Person {
      this.classStanding = classStanding;
     }
     
-  public void getInfo()
+  public String getInfo()
   {
+     return super.getInfo();
      
-      
-  }
+     }
 }
