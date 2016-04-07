@@ -9,7 +9,7 @@ package entities;
  *
  * @author vqm5108
  */
-public abstract class Professor extends Person
+public class Professor extends Person
 {
     private String degree;
     private int salary;

@@ -2,7 +2,7 @@
 package entities;
 
 
-public abstract class Student extends Person {
+public class Student extends Person {
     private int studentIDnum;
     private double GPA;
     private String classStanding;
@@ -17,7 +17,7 @@ public abstract class Student extends Person {
     
   public void getInfo()
   {
-      super.getInfo();
-      System.out.println("ID number: " + studentIDnum + "GPA: " + GPA + "Class standing: " + classStanding);
+     
+      
   }
 }
