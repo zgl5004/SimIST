@@ -14,11 +14,11 @@ public class ClockControl {
     Clock clock;
     
     public void speedup(){
-        
+        clock.speed += 1;
     }
     
     public void slowdown(){
-        
+        clock.speed -= 1;
     }
     
 }
