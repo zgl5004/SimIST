@@ -23,6 +23,7 @@ public class App {
         Clock c = new Clock();
         ISTTime t = new ISTTime();
         System.out.println(t.getTime());
+        c.startTimer();
     }
     
 }
