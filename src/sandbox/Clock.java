@@ -6,11 +6,7 @@ It currently then prints the time and date to show it has changed.
  */
 package sandbox;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -20,7 +16,7 @@ import java.util.TimerTask;
  * @author aahughes, maxwellkos
  */
 public class Clock{
-    LocalTime endTime;
+    LocalTime currentTime;
     ISTTime time;
     Timer progressionOfTime;
     TimerTask task;
@@ -31,8 +27,8 @@ public class Clock{
         
         time = new ISTTime();
         progressionOfTime = new Timer();
-        endTime = LocalTime.of(00,00);
         speed = 1;
+
         task = new TimerTask(){
             @Override
             public void run(){ 
@@ -52,7 +48,7 @@ public class Clock{
                }
              
                System.out.println(time.showTime() + "    " + time.showDate());
-            }
+               }
         };           
     }
     
