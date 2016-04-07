@@ -1,4 +1,4 @@
-package controllers;
+package sandbox;
 import java.net.*;
 import java.io.*;
 import java.util.*;
@@ -12,7 +12,7 @@ import java.util.*;
  *
  * @author jrimland
  */
-public class App {
+public class Weather {
 
     /**
      * @param args the command line arguments
