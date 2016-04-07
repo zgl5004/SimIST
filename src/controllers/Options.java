@@ -7,10 +7,15 @@ package controllers;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridBagLayout;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.SwingConstants;
+import javax.swing.event.ChangeEvent;
 
 /**
  *
@@ -19,33 +24,53 @@ import javax.swing.JPanel;
  */
 public class Options extends JFrame
 {     
-//     int panelWidth;
-//     int panelHeight;
      private boolean pauseOption = false; 
      private JButton start; 
      private JButton pause; 
+     static final int volMin = 0;
+     static final int volMax = 100;
+     static final int volInit = 50;
      JFrame frame = new JFrame("Options");
      
     public Options()
     {
-        super();        
-//        frame.setSize((panelWidth * (1 / 10)), panelHeight);
-//        frame.setSize(new Dimension(800,600));
+        super();
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setBackground(Color.GREEN);
         frame.setLayout(new GridBagLayout());
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
     
     public void addComponents(){
+        JSlider volume = new JSlider(JSlider.HORIZONTAL, volMin, volMax, volInit);
+        
+        volume.addChangeListener(null);
+        volume.setMajorTickSpacing(10);
+        volume.setMinorTickSpacing(2);
+        volume.setPaintTicks(true);
+        volume.setPaintLabels(true);
+        
+        Font volFont = new Font("Serif", Font.BOLD, 15);
+        volume.setFont(volFont);
+        
         start = new JButton("Start");
         pause = new JButton("Pause");
         
         add(start);
         add(pause);
+    }
+    
+    public void stateChanged(ChangeEvent e)
+    {
+        JSlider source = (JSlider)e.getSource();
+        if(!source.getValueIsAdjusting()){
+            int volume = (int)source.getValue();
+            if(volume == 0){
+                
+            }
+        }
     }
     
     public void setStart(JButton start) {
