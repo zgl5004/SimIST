@@ -1,20 +1,17 @@
 /*
-Time currently runs like this.
-current time, which is the system time at the moment the program is run, is turned into the string rightNow by being formatted in the format of a SimpleDateFormat.
-rightNow can be modified by a String called newCurrentTime, which is handled by Clock. setCurrentTime basically makes rightNow = newCurrentTime, so as to simulate the progression of time.
-
-It's kinda simple, and never ends, but I guess it works.
--Max
+ISTTime stores a LocalDateTime object with a default starting time at 4/1/2016 at 8:00.
+It contains methods to set and get the time and date, as well as format and display them.
  */
 package sandbox;
 
 import java.text.ParseException;
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 
 /**
  *
- * @author aah5307
+ * @author aahughes, maxwellkos
  */
 public class ISTTime {
     LocalDateTime now;
@@ -32,20 +29,20 @@ public class ISTTime {
         return now.toLocalDate();
     }
     
-    public void setTime(int hour){
-        now = now.withHour(hour);
+    public void setTime(int hours){
+        now = now.plusHours(hours);
     }
     
     public void setDate(LocalDate newDate){
         now = newDate.atTime(getTime());
     }
     
-    public String showDate(){
-        return now.getDayOfMonth() + " " + now.getMonth() + "" + now.getYear();
+    public String showDate(){  
+        return now.format(DateTimeFormatter.ofPattern("d MMM uuuu"));
     }
     
     public String showTime(){
-        return now.getHour() + " : " + now.getMinute();
+        return now.format(DateTimeFormatter.ofPattern("HH:mm"));
     }
     
 }

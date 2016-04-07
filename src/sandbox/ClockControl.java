@@ -1,13 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ Another class can instantiate a ClockControl to add a clock, which keeps track of time.
+ Speed of the clock can be adjusted from 0 to 3. 0 is stopped, and 1 to 3 increment the clock by 1, 2, or 3 hours at a time.
  */
 package sandbox;
 
 /**
  *
- * @author aah5307
+ * @author aahughes, maxwellkos
  */
 public class ClockControl {
     
