@@ -25,17 +25,22 @@ public class Person {
      lnames.add("Maimone");
      lnames.add("Smith");
     }
-    public String getInfo()
+    public void getInfo()
     {
-     return("First Name: " + this.fName + "Last Name: " + this.lName + " Age: " + this.age);
+        System.out.println("First Name: " + this.fName + "Last Name: " + this.lName + " Age: " + this.age);
     }
    
     
     public static void main(String[] Args)
     {
-      Professor prof = new Professor("Dave", "Smith", 34, "Bachelor's in IST", 68970);
-      Student stud = new Student("Joey", "Williams", 20, 914987112, 3.1, "");
+      Professor prof = new Professor("Dave", "Smith", 34, "Phd in IST", 68970);
+      Student stud = new Student("Joey", "Williams", 20, 914987112, 3.1, "Junior");
       Visitor vis = new Visitor("Vincent", "Maimone", 20);
+      
+      prof.getInfo();
+      stud.getInfo()；
+      vis.getInfo()；
+      
     }
 }
     
