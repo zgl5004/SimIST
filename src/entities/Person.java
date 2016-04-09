@@ -38,8 +38,8 @@ public class Person {
       Visitor vis = new Visitor("Vincent", "Maimone", 20);
 
       prof.getInfo();
-      stud.getInfo()；
-      vis.getInfo()；
+//      stud.getInfo()；
+//      vis.getInfo()；
 
     }
 }

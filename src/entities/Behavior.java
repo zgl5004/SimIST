@@ -21,25 +21,25 @@ public class Behavior {
         this.person2 = person2;
     }
     
-    public void socialize(){
-        person1.setStress(person1.getStress() - 1);
-        person2.setStress(person2.getStress() - 1);
-    }
-    
-    public void groupStudy(){
-        person1.setIntelligence(person1.getIntelligence() + 1);
-        person2.setIntelligence(person2.getIntelligence() + 1);
-    }
-    
-    public void pepTalk(){
-        if(person1.getDisipline() > person2.getDisipline()){
-            person2.setDisipline(person2.getDisipline() + 2);
-        }else if(person1.getDisipline() == person2.getDisipline()){
-            person1.setDisipline(person1.getDisipline() + 1);
-            person2.setDisipline(person2.getDisipline() + 1);
-        }else{
-            person1.setDisipline(person1.getDisipline() + 2);
-        }
-    }
+//    public void socialize(){
+//        person1.setStress(person1.getStress() - 1);
+//        person2.setStress(person2.getStress() - 1);
+//    }
+//    
+//    public void groupStudy(){
+//        person1.setIntelligence(person1.getIntelligence() + 1);
+//        person2.setIntelligence(person2.getIntelligence() + 1);
+//    }
+//    
+//    public void pepTalk(){
+//        if(person1.getDisipline() > person2.getDisipline()){
+//            person2.setDisipline(person2.getDisipline() + 2);
+//        }else if(person1.getDisipline() == person2.getDisipline()){
+//            person1.setDisipline(person1.getDisipline() + 1);
+//            person2.setDisipline(person2.getDisipline() + 1);
+//        }else{
+//            person1.setDisipline(person1.getDisipline() + 2);
+//        }
+//    }
     
 }

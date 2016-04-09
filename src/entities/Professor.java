@@ -21,9 +21,9 @@ public class Professor extends Person
         this.salary = salary;
     }
 
-    public String getInfo()
-    {
-        return super.getInfo();
-    }
+//    public String getInfo()
+//    {
+//        return super.getInfo();
+//    }
 
 }
