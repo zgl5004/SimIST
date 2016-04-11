@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.Timer;
-import entities.*;
+import entities.Room;
 
 /**
  *
@@ -39,7 +39,7 @@ public class Floor extends JPanel implements ActionListener, KeyListener {
        entries = new ArrayList<>();
        rooms.add(new Room(201));
        rooms.add(new Room (301));
-       entries.add(new roomEntry(201,100,50,rooms.get(0)));
+       entries.add(new roomEntry(201,50,50,rooms.get(0)));
        player1 = new player();
        this.addKeyListener(this);
        setFocusable(true);
@@ -61,7 +61,8 @@ public class Floor extends JPanel implements ActionListener, KeyListener {
    
    public void paintComponent(Graphics g){
        super.paintComponent(g);
-        g.clearRect(0, 0, this.getWidth(), this.getHeight());
+      
+       g.clearRect(0, 0, this.getWidth(), this.getHeight());
        for(int i = 0; i <entries.size();i++){
            entries.get(i).paintComponent(g);
        }
