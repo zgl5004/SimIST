@@ -13,14 +13,15 @@ import  javax.swing.*;
  * @author matthewtucker
  */
 public class GameFrame extends JFrame {
-    
+    //private Floor floor1;
     
 
     public GameFrame(String title) {
-        
+        //floor1 = new Floor("Floor 1");
     
         this.setTitle(title);
         this.setSize(new Dimension(500, 500));
+        //this.add(floor1);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
     
