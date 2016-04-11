@@ -10,6 +10,7 @@ public class FloorController {
     
     public FloorController(){
         frame1 = new GameFrame("Test Room");
+        floor1 = new Floor("Floor 1",this);
         frame1.add(floor1);
     }
 

@@ -13,10 +13,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
+
 import javax.swing.JPanel;
 import javax.swing.Timer;
 import entities.Room;
+import controllers.*;
 
 /**
  *
@@ -24,13 +25,14 @@ import entities.Room;
  */
 public class Floor extends JPanel implements ActionListener, KeyListener {
    private String floorName;
+  private FloorController controller;
    private Image floorImage;
    private Timer refreshTimer;
    private ArrayList<Room> rooms;
    private ArrayList<roomEntry> entries;
    private player player1;
    
-   public Floor(String floorName){
+   public Floor(String floorName, FloorController controller){
        refreshTimer = new Timer (50, this);
        refreshTimer.start();
        this.floorName = floorName;
@@ -40,6 +42,7 @@ public class Floor extends JPanel implements ActionListener, KeyListener {
        rooms.add(new Room(201));
        rooms.add(new Room (301));
        entries.add(new roomEntry(201,50,50,rooms.get(0)));
+       this.controller = controller;
        player1 = new player();
        this.addKeyListener(this);
        setFocusable(true);
@@ -70,7 +73,7 @@ public class Floor extends JPanel implements ActionListener, KeyListener {
        
        for(int i = 0; i<rooms.size();i++){
           if(player1.intersects(entries.get(i))){
-              //JOptionPane.showConfirmDialog(this,"This is room number "+rooms.get(i).getNum()+"Do you want to enter?");
+              controller.floorToRoom(rooms.get(i).getRoom());
               
           }
        }
@@ -166,6 +169,9 @@ public class Floor extends JPanel implements ActionListener, KeyListener {
        
        public int getNum(){
            return this.roomNum;
+       }
+       public Room getRoom(){
+           return this.room1;
        }
    }
 }
