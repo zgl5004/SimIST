@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.Timer;
+import entities.*;
 
 /**
  *
@@ -26,6 +27,7 @@ public class Floor extends JPanel implements ActionListener, KeyListener {
    private Image floorImage;
    private Timer refreshTimer;
    private ArrayList<Room> rooms;
+   private ArrayList<roomEntry> entries;
    private player player1;
    
    public Floor(String floorName){
@@ -34,11 +36,14 @@ public class Floor extends JPanel implements ActionListener, KeyListener {
        this.floorName = floorName;
        //this.floorImage = floorImage;
        rooms = new ArrayList<>();
-       rooms.add(new Room(3, 50,50));
+       entries = new ArrayList<>();
+       rooms.add(new Room(201));
+       rooms.add(new Room (301));
+       entries.add(new roomEntry(201,100,50,rooms.get(0)));
        player1 = new player();
        this.addKeyListener(this);
        setFocusable(true);
-        requestFocusInWindow();
+       requestFocusInWindow();
    }
    
    
@@ -57,14 +62,15 @@ public class Floor extends JPanel implements ActionListener, KeyListener {
    public void paintComponent(Graphics g){
        super.paintComponent(g);
         g.clearRect(0, 0, this.getWidth(), this.getHeight());
-       for(int i = 0; i < rooms.size();i++){
-           rooms.get(i).paintComponent(g);
+       for(int i = 0; i <entries.size();i++){
+           entries.get(i).paintComponent(g);
        }
        player1.paintComponent(g);
        
        for(int i = 0; i<rooms.size();i++){
-          if(player1.intersects(rooms.get(i))){
-              JOptionPane.showConfirmDialog(this,"This is room number"+rooms.get(i).getNum()+"Do you want to enter?");
+          if(player1.intersects(entries.get(i))){
+              //JOptionPane.showConfirmDialog(this,"This is room number "+rooms.get(i).getNum()+"Do you want to enter?");
+              
           }
        }
    }
@@ -132,21 +138,23 @@ public class Floor extends JPanel implements ActionListener, KeyListener {
    
    
    
-   private class Room extends Rectangle{
+   private class roomEntry extends Rectangle{
        private int roomNum;
        private int floor;
        private int capacity;
        private int xLocation;
        private int yLocation;
+       private Room room1;
        //private JPanel roomView;
        
-       public Room(int roomNum, int x, int y){
+       public roomEntry(int roomNum, int x, int y, Room room1 ){
            this.roomNum = roomNum;
            //this.roomView = roomView;
            this.xLocation = x;
            this.yLocation = y;
            this.capacity = 50;
            this.floor = 1;
+           this.room1=room1;
            
            this.setBounds(this.xLocation, this.yLocation, 30, 30);
        }

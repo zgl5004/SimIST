@@ -1,6 +1,8 @@
 package controllers;
 
 import java.util.ArrayList;
+import entities.*;
+import views.*;
 
 public class Floor {
 
@@ -20,6 +22,10 @@ public class Floor {
 
     public void setUnitList(ArrayList<Unit> unitList) {
         this.unitList = unitList;
+    }
+    
+    public void floorToRoom(Room room1){
+        
     }
 
 }
